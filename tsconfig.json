@@ -1,0 +1,41 @@
+{
+  "compilerOptions": {
+    "composite": true,
+    "allowSyntheticDefaultImports": true,
+    "target": "ESNext",
+    "useDefineForClassFields": true,
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+    "skipLibCheck": true,
+    "baseUrl": "./src",
+    "paths": {
+      "@paytweed/components": ["components/index.ts"],
+      "@paytweed/context": ["context/index.ts"],
+      "@paytweed/hooks": ["hooks/index.ts"]
+    },
+    /* Bundler mode */
+    "moduleResolution": "bundler",
+    "allowImportingTsExtensions": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true,
+    "jsx": "react-jsx",
+
+    /* Linting */
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "ts-node": {
+    "compilerOptions": {
+      "module": "esnext", // of course
+      "noEmit": true,
+      "allowImportingTsExtensions": true, // This is optional, but since I use this style, I need to turn it on.
+      "esModuleInterop": true, //This is required since some of the dependencies are CommonJS packages.
+      "moduleResolution": "NodeNext" // required
+    },
+    "esm": true
+  },
+  "include": ["src"],
+}
